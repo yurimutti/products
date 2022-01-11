@@ -9,6 +9,7 @@ export const Product = styled.div`
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 2.0rem;
+  width: 100%;
   max-width: 30.4rem;
   transition: all 2s;
 
@@ -21,6 +22,7 @@ export const Product = styled.div`
     right: 3.2rem;
     top: 3.2rem;
     cursor: pointer;
+    z-index: 2;
 
     path {
       transition: all .2s;
@@ -52,6 +54,17 @@ export const Product = styled.div`
     &.added {
       circle {
         fill: #C22539;
+      }
+    }
+  }
+
+  .image {
+    overflow: hidden;
+
+    img {
+      transition: all ease .35s;
+      &:hover {
+        transform: scale(0.9)
       }
     }
   }

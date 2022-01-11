@@ -28,7 +28,7 @@ export function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <ProductGrid products={products} />
+      <ProductGrid products={products}/>
     </div>
   );
 }
