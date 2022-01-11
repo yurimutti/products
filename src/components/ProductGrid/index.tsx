@@ -12,14 +12,13 @@ interface Products {
   products: ProductsProps[];
 }
 
-export function ProductGrid(props: Products){
+export function ProductGrid({ products }: Products){
   return(
     <Container>
       <Content>
-        <ProductItem/>
-        <ProductItem/>
-        <ProductItem/>
-        <ProductItem/>
+        {products.map((product) => (
+          <ProductItem key={product.id} />
+        ))}
       </Content>
     </Container>
   )
