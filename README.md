@@ -1,46 +1,68 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <img alt="Sami" title="Sami" width="30%" src="./src/img/github/sami-logo.jpg" />
+    <br>
+    Sami
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4 align="center">
+  Plataforma de listagem de heróis.
+</h4>
 
-## Available Scripts
+<p align="center">
+ <a href="#four_leaf_clover-tecnologias-utilizadas">Tecnologias utilizadas</a> •
+ <a href="#rocket-subindo-a-aplicação">Subindo a aplicação</a>
+</p>
 
-In the project directory, you can run:
+<h2 align="center">
+  <img alt="Listagem de Heróis" title="Listagem de Heróis" src="./src/img/github/myhero-gif-web.gif" />
+</h2>
 
-### `yarn start`
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h2 align="center">
+  <img alt="Listagem de Heróis" title="Listagem de Heróis" src="./src/img/github/myhero-gif-mobile.gif" />
+</h2>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## :four_leaf_clover: Tecnologias utilizadas
 
-### `yarn test`
+Esse projeto está sendo desenvolvido com as seguintes tecnologias.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   [ReactJS](https://reactjs.org/)
+-   [Axios](https://github.com/axios/axios)
+-   [swiperjs](https://swiperjs.com/react)
+-   [react-icons](https://react-icons.github.io/react-icons/)
+-   [VS Code][vc]
 
-### `yarn build`
+## :rocket: Subindo a aplicação
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para clonar e subir a aplicação, é necessário ter o [Git](https://git-scm.com) e
+o [Node.js][nodejs] instalados em sua máquina.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Faça um clone da aplicação.
+$ git clone https://github.com/yurimutti/myhero.git
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Vá até o repositório.
+$ cd myhero
 
-### `yarn eject`
+# Instale as dependências.
+$ yarn
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Ou
+$ npm install
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Suba a aplicação.
+$ yarn start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+# Ou
+$ npm run start
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+[Yuri Mutti no LinkedIn](https://www.linkedin.com/in/yuri-mutti-0418bb1aa/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[nodejs]: https://nodejs.org/
+[npm]: https://www.npmjs.com/
+[vc]: https://code.visualstudio.com/

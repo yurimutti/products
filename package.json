@@ -1,8 +1,17 @@
 {
-  "name": "teste-dev-frontend",
+  "name": "boilerplate-react-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.24.0",
+    "miragejs": "^0.1.43",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0",
+    "styled-components": "^5.3.3",
+    "web-vitals": "^2.1.0"
+  },
+  "devDependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -10,11 +19,8 @@
     "@types/node": "^16.7.13",
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.9",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
-    "typescript": "^4.4.2",
-    "web-vitals": "^2.1.0"
+    "@types/styled-components": "^5.1.19",
+    "typescript": "^4.4.2"
   },
   "scripts": {
     "start": "react-scripts start",

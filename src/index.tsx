@@ -1,8 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { createServer } from 'miragejs'
+import { App } from './App';
+
+createServer({
+  routes(){
+    this.namespace = 'api';
+
+    this.get('/products', () => {
+      return [
+        {
+          id: 1,
+          name: "Monitor LED 27'' Gamer Curvo Samsung  1920 x 1080 FHD 240 Hz HDMI, DP, Gsync Série CRG50",
+          originalPrice: 281399,
+          bestPrice: 259900,
+          imageUrl: "/static/media/product.39eeabcd8904e7821eb1.png",
+        },
+        {
+          id: 2,
+          name: "Monitor LED 27'' Gamer Curvo Samsung  1920 x 1080 FHD 240 Hz HDMI, DP, Gsync Série CRG50",
+          originalPrice: 281399,
+          bestPrice: 259900,
+          imageUrl: "/static/media/product.39eeabcd8904e7821eb1.png",
+        },
+      ]
+    })
+  }
+})
 
 ReactDOM.render(
   <React.StrictMode>
@@ -10,8 +34,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

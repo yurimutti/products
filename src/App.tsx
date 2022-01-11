@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import { ProductGrid } from "./components/ProductGrid";
+import { api } from "./services/api";
+import { GlobalStyle } from "./style/global";
 
-function App() {
+interface Products {
+  id: number,
+  name: string,
+  originalPrice: number,
+  bestPrice: number,
+  imageUrl: string,
+}
+
+export function App() {
+  const [products, setProducts] = useState<Products[]>([])
+  
+  useEffect(() => {
+
+    const fetchItems = async () => {
+      const response = await api.get('products')
+
+      setProducts(response.data)
+    }
+    
+    fetchItems();
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalStyle />
+      <ProductGrid products={products} />
     </div>
   );
 }
-
-export default App;
