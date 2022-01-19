@@ -1,5 +1,5 @@
 <h1 align="center">
-    b8one
+    Products
 </h1>
 
 <p align="center">
@@ -26,7 +26,7 @@ o [Node.js][nodejs] instalados em sua máquina.
 $ git clone https://github.com/yurimutti/b8one
 
 # Vá até o repositório.
-$ cd b8one
+$ cd products
 
 # Instale as dependências.
 $ yarn
