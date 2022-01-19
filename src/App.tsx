@@ -4,11 +4,11 @@ import { api } from "./services/api";
 import { GlobalStyle } from "./style/global";
 
 interface Products {
-  id: number,
-  name: string,
-  originalPrice: number,
-  bestPrice: number,
-  imageUrl: string,
+  id: number
+  name: string
+  originalPrice: number
+  bestPrice: number
+  imageUrl: string
 }
 
 export function App() {

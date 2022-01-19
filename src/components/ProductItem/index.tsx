@@ -1,34 +1,47 @@
 import { useState } from 'react'
 import { Product } from './styles'
 import { WishListIcon } from '../WishListIcon'
+import { formatPrice } from '../../utils/format'
 
-export function ProductItem(){
+interface ProductProps {
+  product: {
+    id: number;
+    name: string;
+    originalPrice: number;
+    bestPrice: number;
+    imageUrl: string;
+  }
+}
+
+export function ProductItem({ product }: ProductProps){
   const [add, setAdd] = useState(false)
   const [wishList, setWishList] = useState(false)
 
-  function handleAddClick(){
+  function handleClickAdd(){
     setAdd(!add)
   }
 
-  function handleWishClick(){
+  function handleClickWish(){
     setWishList(!wishList)
   }
   
   return(
     <Product>
-      <WishListIcon onClick={handleWishClick} className={wishList ? 'added' : ''}/>
+      <WishListIcon onClick={handleClickWish} className={wishList ? 'added' : ''}/>
       <div className="image">
-        <img src={process.env.PUBLIC_URL + '/product.png'} alt="Produto"/>
+        <img src={product.imageUrl} alt="Produto"/>
       </div>
       <div className="name">
-        <p>Monitor LED 27'' Gamer Curvo Samsung  1920 x 1080 FHD 240 Hz HDMI, DP, Gsync Série CRG50</p>
+        <p>{product.name}</p>
       </div>
       <div className="price">
-        <span className="original">R$ 2.813,99</span>
-        <strong className="best">R$ 2.599,00</strong>
-        <p className="installments">em até <strong>10x de R$ 259,90</strong> sem juros</p>
+        <span className="original">{formatPrice(product.originalPrice)}</span>
+        <strong className="best">{formatPrice(product.bestPrice)}</strong>
+        <p className="installments">em até <strong>10x de {formatPrice((product.bestPrice * 10) / 100)}</strong> sem juros</p>
       </div>
-      <button onClick={handleAddClick} className={add ? 'added' : ''}>{add ? 'Adicionado' : 'Adicionar'}</button>
+      <button onClick={handleClickAdd} className={add ? 'added' : ''}>
+        {add ? 'Adicionado' : 'Adicionar'}
+      </button>
     </Product>
   )
 }

@@ -12,6 +12,8 @@ export const Product = styled.div`
   width: 100%;
   max-width: 30.4rem;
   transition: all 2s;
+  display: flex;
+  flex-direction: column;
 
   &:hover {
     box-shadow: 0px 8px 24px 0px hsba(0, 0%, 0%, 0,08);
@@ -74,6 +76,7 @@ export const Product = styled.div`
   }
 
   .price {
+    flex: 1;
     padding-top: 2.4rem;
 
     .original, .best {
